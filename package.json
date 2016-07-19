@@ -1,0 +1,22 @@
+{
+  "name": "reveal-leap-motion",
+  "version": "0.1.0",
+  "description": "A plugin which allows you to use your Leap Motion device to control basic navigation of your Reveal.js presentation",
+  "main": "leap_motion.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gneatgeek/reveal-leap-motion.git"
+  },
+  "keywords": [
+    "reveal",
+    "reveal.js",
+    "leap_motion",
+    "leapjs"
+  ],
+  "author": "Rory Hardy & James Sun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gneatgeek/reveal-leap-motion/issues"
+  },
+  "homepage": "https://github.com/gneatgeek/reveal-leap-motion#readme"
+}

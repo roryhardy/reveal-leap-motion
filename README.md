@@ -2,6 +2,10 @@
 
 The Leap Motion plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
 
+## Quick start
+* Add the `leap_motion.js` file to your slideshow and configure accordingly.
+* Install with NPM `npm install reveal-leap-motion` and configure accordingly.
+
 ## Supported gestures
 
 **1 to 2 fingers**
