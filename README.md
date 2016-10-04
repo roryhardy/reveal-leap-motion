@@ -2,6 +2,9 @@
 
 The Leap Motion plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
 
+__Featured in:__
+- [blog.leapmotion.com - Put an End to Boring Presentations with Reveal.js][4]
+
 ## Quick start
 * Add the `leap_motion.js` file to your slideshow and configure accordingly.
 * Install with NPM `npm install reveal-leap-motion` and configure accordingly.
@@ -78,3 +81,4 @@ To get started, log an issue to the [issue tracker][3] or submit a pull request.
 [1]: https://www.leapmotion.com/
 [2]: http://lab.hakim.se/reveal-js/#/
 [3]: https://github.com/gneatgeek/reveal.js-leap-motion/issues
+[4]: http://blog.leapmotion.com/featured-platform-put-end-boring-presentations-reveal-js/
