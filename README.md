@@ -1,6 +1,6 @@
-# reveal.js-leap-motion
+# reveal-leap-motion
 
-The Leap Motion plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
+This plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
 
 __Featured in:__
 - [blog.leapmotion.com - Put an End to Boring Presentations with Reveal.js][4]
