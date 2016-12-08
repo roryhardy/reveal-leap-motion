@@ -2,7 +2,7 @@
   "name": "reveal-leap-motion",
   "version": "0.1.0",
   "description": "A plugin which allows you to use your Leap Motion device to control basic navigation of your Reveal.js presentation",
-  "main": "leap_motion.js",
+  "main": "src/reveal-leap-motion.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gneatgeek/reveal-leap-motion.git"
@@ -27,12 +27,14 @@
     "eslint": "^3.11.1",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "leapjs": "^0.6.4",
     "webpack": "^1.14.0"
   },
   "scripts": {
     "build": "webpack -p",
     "lint-js": "eslint .",
     "test": "npm run lint-js"
+  },
+  "dependencies": {
+    "leapjs": "^0.6.4"
   }
 }
