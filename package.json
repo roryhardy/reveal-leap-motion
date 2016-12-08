@@ -24,10 +24,15 @@
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "leapjs": "^0.6.4",
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "lint-js": "eslint .",
+    "test": "npm run lint-js"
   }
 }
