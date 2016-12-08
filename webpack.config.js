@@ -15,7 +15,7 @@ module.exports = {
     ],
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].min.js',
     path: path.join(__dirname),
   },
   resolve: {
