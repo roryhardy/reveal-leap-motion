@@ -48,9 +48,9 @@ import Leap from 'leapjs';
     // Timing code to rate limit gesture execution
     now = new Date().getTime();
 
-    // Pointer: 1 to 2 fingers. Strictly one finger works but may cause innaccuracies.
-    // The innaccuracies were observed on a development model and may not be an issue with consumer models.
-    if( frame.fingers.length > 0 && frame.fingers[1].extended ) {
+    // Check if the index finger is pointing
+    // Check that the middle finger is not pointing to help clean up gestures
+    if( frame.fingers.length > 0 && frame.fingers[1].extended && !frame.fingers[2].extended) {
       // Invert direction and multiply by 3 for greater effect.
       size = -3 * frame.fingers[1].tipPosition[2];
 
