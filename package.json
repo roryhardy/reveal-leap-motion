@@ -14,7 +14,7 @@
     "leapjs"
   ],
   "author": "Rory Hardy & James Sun",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/gneatgeek/reveal-leap-motion/issues"
   },
