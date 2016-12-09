@@ -1,5 +1,8 @@
 # reveal-leap-motion
 
+[![NPM version](http://img.shields.io/npm/v/reveal-leap-motion.svg)](https://www.npmjs.org/package/reveal-leap-motion)
+[![Build Status](https://travis-ci.org/gneatgeek/reveal-leap-motion.svg?branch=master)](https://travis-ci.org/gneatgeek/reveal-leap-motion)
+
 This plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
 
 __Featured in:__
