@@ -3,63 +3,80 @@
 [![NPM version](http://img.shields.io/npm/v/reveal-leap-motion.svg)](https://www.npmjs.org/package/reveal-leap-motion)
 [![Build Status](https://travis-ci.org/gneatgeek/reveal-leap-motion.svg?branch=master)](https://travis-ci.org/gneatgeek/reveal-leap-motion)
 
-**WARNING:** These docs are currently out of date.  They will be updated with [#5](https://github.com/gneatgeek/reveal-leap-motion/issues/5).
-
 This plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
 
 __Featured in:__
-- [blog.leapmotion.com - Put an End to Boring Presentations with Reveal.js][4]
+- [Put an End to Boring Presentations with Reveal.js][4]
 
-## Quick start
-* Add the `leap_motion.js` file to your slideshow and configure accordingly.
-* Install with NPM `npm install reveal-leap-motion` and configure accordingly.
+## Getting Started
+### npm
+1. Download and install the package in the presentation project: `npm i -S reveal-leap-motion`
+1. Add the plugin to the dependencies in the presentation, as below:
 
-## Supported gestures
+```js
+Reveal.initialize({
+    // ...
+    dependencies: [
+        // ... 
+        { src: 'node_modules/reveal-leap-motion/reveal-leap-motion.min.js', async: true }
+    ]
+});
+```
 
-**1 to 2 fingers**
+### Manual
+1. Add the [reveal-leap-motion.min.js](https://github.com/gneatgeek/reveal-leap-motion/blob/master/reveal-leap-motion.min.js) file to the slideshow project's plugin directory.
+1. Add the plugin to the dependencies in the presentation, as below:
 
-Pointer &mdash; Point to anything on screen. Move your finger past the device to expand the pointer.
-
-**1 hand + 3 or more fingers (left/right/up/down)**
-
-Navigate through your slides. See config options to invert movements.
-
-**2 hands upwards**
-
-Toggle the overview mode. Do it a second time to exit the overview.
+```js
+Reveal.initialize({
+    // ...
+    dependencies: [
+        // ... 
+        { src: 'plugin/reveal-leap-motion/reveal-leap-motion.min.js', async: true }
+    ]
+});
+```
 
 ## Config Options
 You can edit the following options:
 
-| Property          | Default           | Description
-| ----------------- |:-----------------:| :-------------
-| autoCenter        | true              | Center the pointer based on where you put your finger into the leap motions detection field.
-| gestureDelay      | 500               | How long to delay between gestures in milliseconds.
-| naturalSwipe      | true              | Swipe as though you were touching a touch screen. Set to false to invert.
-| pointerColor      | #00aaff           | The color of the pointer.
-| pointerOpacity    | 0.7               | The opacity of the pointer.
-| pointerSize       | 15                | The minimum height and width of the pointer.
-| pointerTolerance  | 120               | Bigger = slower pointer.
+| Property         | Default | Description                                                                             |
+|------------------|:-------:|-----------------------------------------------------------------------------------------|
+| autoCenter       |   true  | Center the pointer based on where your finger enters the leap motion's detection field. |
+| gestureDelay     |   500   | How long to delay between gestures in milliseconds.                                     |
+| naturalSwipe     |   true  | Swipe as though you were using a touch screen. Set to false to invert.                  |
+| pointerColor     | #00aaff | The color of the pointer.                                                               |
+| pointerOpacity   |   0.7   | The opacity of the pointer.                                                             |
+| pointerSize      |    15   | The minimum height and width of the pointer.                                            |
+| pointerTolerance |   120   | Larger values yield slower movement.                                                    |
 
 
-Example configuration:
+__Example configuration:__
+
 ```js
 Reveal.initialize({
-
-  // other options...
-
+  //...
   leap: {
-    naturalSwipe   : false,    // Invert swipe gestures
-    pointerOpacity : 0.5,      // Set pointer opacity to 0.5
-    pointerColor   : '#d80000' // Red pointer
+    naturalSwipe: false,     // Invert swipe gestures
+    pointerColor: '#d80000', // Red pointer
+    pointerOpacity: 0.5,     // Set pointer opacity to 0.5
   },
-
-  dependencies: [
-    { src: 'plugin/leap/leap.js', async: true }
-  ]
-
 });
 ```
+
+## Supported Gestures
+
+### Index Finger Only
+
+When a single index finger is extended, a circular pointer will appear on screen, which tracks the finger. Moving closer to the device expands the pointer.
+
+### Multiple Fingers with One Hand
+
+Navigate through the slides by swiping up, down, left, or right. See the [config options](#config_options) to invert movements.
+
+### Two Hands
+
+Swiping upwards with two hands will toggle the overview mode. A second swipe will exit the overview.
 
 ## Contributing
 
