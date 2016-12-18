@@ -11,7 +11,7 @@ Please review the below guidelines to ensure a smooth process.
 - Browse the [existing issues][1] before logging new issues.
 - Open an issue with a descriptive title and summary.
 - Be as clear and explicit as you can in your description of the problem.
-- State the version of Operating System, Browser, and reveal-leap-motion you are using in the description.
+- State the version of operating system, browser, and reveal-leap-motion you are using in the description.
 - Include any relevant code in the issue summary.
 
 ## Pull Requests
