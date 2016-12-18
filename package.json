@@ -1,6 +1,6 @@
 {
   "name": "reveal-leap-motion",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A plugin which allows you to use your Leap Motion device to control basic navigation of your Reveal.js presentation",
   "main": "src/reveal-leap-motion.js",
   "repository": {
