@@ -6,7 +6,7 @@
 This plugin lets you utilize your [Leap Motion][1] device to control basic navigation of your [Reveal.js][2] presentation.
 
 __Featured in:__
-- [Put an End to Boring Presentations with Reveal.js][4]
+- [Put an End to Boring Presentations with Reveal.js][3]
 
 ## Getting Started
 ### npm
@@ -77,3 +77,9 @@ Navigate through the slides by swiping up, down, left, or right. See the [config
 ### Two Hands
 
 Swiping upwards with two hands will toggle the overview mode. A second swipe will exit the overview.
+
+
+[1]: https://www.leapmotion.com/
+[2]: http://lab.hakim.se/reveal-js/#/
+[3]: http://blog.leapmotion.com/featured-platform-put-end-boring-presentations-reveal-js/
+ 
