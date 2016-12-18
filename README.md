@@ -17,7 +17,7 @@ __Featured in:__
 Reveal.initialize({
     // ...
     dependencies: [
-        // ... 
+        // ...
         { src: 'node_modules/reveal-leap-motion/reveal-leap-motion.min.js', async: true }
     ]
 });
@@ -31,7 +31,7 @@ Reveal.initialize({
 Reveal.initialize({
     // ...
     dependencies: [
-        // ... 
+        // ...
         { src: 'plugin/reveal-leap-motion/reveal-leap-motion.min.js', async: true }
     ]
 });
@@ -77,30 +77,3 @@ Navigate through the slides by swiping up, down, left, or right. See the [config
 ### Two Hands
 
 Swiping upwards with two hands will toggle the overview mode. A second swipe will exit the overview.
-
-## Contributing
-
-Help make this plugin better by contributing.
-Any contribution is welcome be it new features or simply correcting a typo in the documentation.
-To get started, log an issue to the [issue tracker][3] or submit a pull request.
-
-### Issue reporting
-
-* Please browse the [existing issues][3] before logging new issues.
-* When creating an issue, please include a descriptive title and a summary.
-* Please be clear and explicit in your description of the problem.
-* Please include operating system, browser, and any other details that may be relevant pertaining to your environment.
-* Please include any relevant code in the issue summary.
-
-
-### Pull Requests
-- Should follow the coding style of the file you work in, most importantly:
-  - Two spaces to indent
-  - Single-quoted strings
-- Should be made towards the **master branch**
-- Should be submitted from a feature/topic branch (not your master)
-
-[1]: https://www.leapmotion.com/
-[2]: http://lab.hakim.se/reveal-js/#/
-[3]: https://github.com/gneatgeek/reveal.js-leap-motion/issues
-[4]: http://blog.leapmotion.com/featured-platform-put-end-boring-presentations-reveal-js/
