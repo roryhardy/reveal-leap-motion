@@ -56,7 +56,7 @@ __Example configuration:__
 ```js
 Reveal.initialize({
   //...
-  leap: {
+  "reveal-leap-motion": {
     naturalSwipe: false,     // Invert swipe gestures
     pointerColor: '#d80000', // Red pointer
     pointerOpacity: 0.5,     // Set pointer opacity to 0.5
@@ -82,4 +82,3 @@ Swiping upwards with two hands will toggle the overview mode. A second swipe wil
 [1]: https://www.leapmotion.com/
 [2]: http://lab.hakim.se/reveal-js/#/
 [3]: http://blog.leapmotion.com/featured-platform-put-end-boring-presentations-reveal-js/
- 

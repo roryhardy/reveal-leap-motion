@@ -33,12 +33,12 @@ const defaults = {
 
 const body = document.body;
 const controllerOptions = { enableGestures: true };
-const leapConfig = Reveal.getConfig().leap;
+const leapConfig = Reveal.getConfig()['reveal-leap-motion'];
 const pointer = document.createElement('div');
 
 const config = assign({}, defaults, leapConfig);
 
-pointer.id = 'leap';
+pointer.id = 'reveal-leap-motion';
 pointer.style.backgroundColor = config.pointerColor;
 pointer.style.opacity = config.pointerOpacity;
 pointer.style.position = 'absolute';
