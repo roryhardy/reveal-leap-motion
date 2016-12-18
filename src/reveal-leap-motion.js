@@ -2,6 +2,11 @@
 
 import Leap from 'leapjs';
 import assign from 'lodash/assign';
+import {
+  computeCenteredPosition,
+  computeLeftPosition,
+  computeTopPosition,
+} from './lib';
 
 /*!
  * reveal-leap-motion
@@ -56,22 +61,6 @@ const updatePointer = (tipPosition) => {
   pointer.style.visibility = 'visible';
 };
 
-const computeCenteredPosition = (tipLocation, enteredLocation, offset, inverse = false) => {
-  let position = ((tipLocation - enteredLocation) * offset) / config.pointerTolerance;
-
-  if (inverse) {
-    position *= -1;
-  }
-
-  return position + (offset / 2);
-};
-
-const computeLeftPosition = (tipPosition, offset) =>
-  ((tipPosition * offset) / config.pointerTolerance) + (offset / 2);
-
-const computeTopPosition = (tipPosition, offset) =>
-  (1 - ((tipPosition - 50) / config.pointerTolerance)) * offset;
-
 Leap.loop(controllerOptions, (frame) => {
   const now = new Date().getTime();
 
@@ -91,14 +80,34 @@ Leap.loop(controllerOptions, (frame) => {
         enteredPosition = frame.fingers[1].tipPosition;
       }
 
-      const left = computeCenteredPosition(tipPosition[0], enteredPosition[0], offsetWidth);
-      const top = computeCenteredPosition(tipPosition[1], enteredPosition[1], offsetHeight, true);
+      const left = computeCenteredPosition(
+                    tipPosition[0],
+                    enteredPosition[0],
+                    offsetWidth,
+                    config.pointerTolerance);
+
+      const top = computeCenteredPosition(
+                    tipPosition[1],
+                    enteredPosition[1],
+                    offsetHeight,
+                    config.pointerTolerance,
+                    true);
 
       pointer.style.left = `${left}px`;
       pointer.style.top = `${top}px`;
     } else {
-      pointer.style.left = `${computeLeftPosition(tipPosition[0], offsetWidth)}px`;
-      pointer.style.top = `${computeTopPosition(tipPosition[1], offsetHeight)}px`;
+      const left = computeLeftPosition(
+                    tipPosition[0],
+                    offsetWidth,
+                    config.pointerTolerance);
+
+      const top = computeTopPosition(
+                    tipPosition[1],
+                    offsetHeight,
+                    config.pointerTolerance);
+
+      pointer.style.left = `${left}px`;
+      pointer.style.top = `${top}px`;
     }
   } else {
     // Hide pointer on exit
@@ -111,9 +120,8 @@ Leap.loop(controllerOptions, (frame) => {
     const gesture = frame.gestures[0];
 
     // One hand gestures
-    if (frame.hands.length === 1) {
-      // Swipe gestures. 3+ fingers.
-      if (frame.fingers.length > 2 && gesture.type === 'swipe') {
+    if (frame.hands.length === 1 && frame.fingers[2].extended) {
+      if (gesture.type === 'swipe') {
         const x = gesture.direction[0];
         const y = gesture.direction[1];
 
