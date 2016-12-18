@@ -4,7 +4,7 @@ import Leap from 'leapjs';
 import assign from 'lodash/assign';
 
 /*!
- * reveal-leap-motion v1.0.0
+ * reveal-leap-motion
  * https://github.com/gneatgeek/reveal-leap-motion
  *
  * Copyright 2016 Rory Hardy, James Sun, and other contributors
