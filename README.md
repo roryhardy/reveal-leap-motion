@@ -72,7 +72,7 @@ When a single index finger is extended, a circular pointer will appear on screen
 
 ### Multiple Fingers with One Hand
 
-Navigate through the slides by swiping up, down, left, or right. See the [config options](#config_options) to invert movements.
+Navigate through the slides by swiping up, down, left, or right. See the [config options](#config-options) to invert movements.
 
 ### Two Hands
 
