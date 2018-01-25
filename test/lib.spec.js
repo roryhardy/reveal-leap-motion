@@ -1,17 +1,17 @@
 /* eslint-env mocha */
 
+import chai from 'chai';
+
 import {
   computeCenteredPosition,
   computeLeftPosition,
   computeTopPosition,
 } from '../src/lib';
 
-const chai = require('chai');
-
 const { expect } = chai;
 
 describe('#computeCenteredPosition', () => {
-  describe('when inverse is false', () => {
+  context('when inverse is false', () => {
     it('returns NaN with all 0 input', () => {
       // eslint-disable-next-line no-unused-expressions
       expect(computeCenteredPosition(0, 0, 0, 0)).to.be.NaN;
@@ -30,7 +30,7 @@ describe('#computeCenteredPosition', () => {
     });
   });
 
-  describe('when inverse is true', () => {
+  context('when inverse is true', () => {
     it('returns NaN with all 0 input', () => {
       // eslint-disable-next-line no-unused-expressions
       expect(computeCenteredPosition(0, 0, 0, 0, true)).to.be.NaN;
