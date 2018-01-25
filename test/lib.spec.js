@@ -1,14 +1,12 @@
 /* eslint-env mocha */
 
-import chai from 'chai';
+import { expect } from 'chai';
 
 import {
   computeCenteredPosition,
   computeLeftPosition,
   computeTopPosition,
 } from '../src/lib';
-
-const { expect } = chai;
 
 describe('#computeCenteredPosition', () => {
   context('when inverse is false', () => {
