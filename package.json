@@ -1,45 +1,44 @@
 {
   "name": "reveal-leap-motion",
-  "version": "1.0.0",
   "description": "A plugin which allows you to use your Leap Motion device to control basic navigation of your Reveal.js presentation",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Rory Hardy & James Sun",
+  "bugs": {
+    "url": "https://github.com/gneatgeek/reveal-leap-motion/issues"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.18.0",
+    "banner-webpack-plugin": "^0.2.3",
+    "chai": "^4.1.2",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^5.0.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "leapjs": "^0.6.4",
+    "lodash": "^4.17.4"
+  },
+  "homepage": "https://github.com/gneatgeek/reveal-leap-motion#readme",
+  "keywords": [
+    "leap-motion",
+    "leapjs",
+    "reveal-js",
+    "reveal"
+  ],
   "main": "src/reveal-leap-motion.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gneatgeek/reveal-leap-motion.git"
   },
-  "keywords": [
-    "reveal",
-    "reveal.js",
-    "leap_motion",
-    "leapjs"
-  ],
-  "author": "Rory Hardy & James Sun",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/gneatgeek/reveal-leap-motion/issues"
-  },
-  "homepage": "https://github.com/gneatgeek/reveal-leap-motion#readme",
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.8",
-    "babel-preset-es2015": "^6.18.0",
-    "banner-webpack-plugin": "^0.2.3",
-    "chai": "^4.1.2",
-    "eslint-config-airbnb-base": "^10.0.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint": "^3.11.1",
-    "mocha": "^4.1.0",
-    "webpack": "^1.14.0"
-  },
   "scripts": {
     "build": "webpack -p",
     "lint-js": "eslint .",
     "test": "npm run lint-js && npm run test-js",
-    "test-js": "mocha --compilers js:babel-core/register"
-  },
-  "dependencies": {
-    "leapjs": "^0.6.4",
-    "lodash": "^4.17.4"
+    "test-js": "NODE_ENV=testing mocha --require babel-core/register"
   }
 }

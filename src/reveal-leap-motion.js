@@ -1,13 +1,3 @@
-/* global Reveal:false */
-
-import Leap from 'leapjs';
-import assign from 'lodash/assign';
-import {
-  computeCenteredPosition,
-  computeLeftPosition,
-  computeTopPosition,
-} from './lib';
-
 /*!
  * reveal-leap-motion
  * https://github.com/gneatgeek/reveal-leap-motion
@@ -17,21 +7,29 @@ import {
  * https://github.com/gneatgeek/reveal-leap-motion/blob/master/LICENSE
  */
 
+import Leap from 'leapjs';
+import assign from 'lodash/assign';
+import {
+  computeCenteredPosition,
+  computeLeftPosition,
+  computeTopPosition,
+} from './lib';
+
 let entered = false;
 let lastGesture = 0;
 let enteredPosition;
 
 const defaults = {
-  autoCenter: true,        // Center pointer around detected position
-  gestureDelay: 500,       // How long to delay between gestures
-  naturalSwipe: true,      // Swipe as if it were a touch screen
+  autoCenter: true, // Center pointer around detected position
+  gestureDelay: 500, // How long to delay between gestures
+  naturalSwipe: true, // Swipe as if it were a touch screen
   pointerColor: '#00aaff', // Default color of the pointer
-  pointerOpacity: 0.7,     // Default opacity of the pointer
-  pointerSize: 15,         // Default minimum height/width of the pointer
-  pointerTolerance: 120,   // Bigger = slower pointer
+  pointerOpacity: 0.7, // Default opacity of the pointer
+  pointerSize: 15, // Default minimum height/width of the pointer
+  pointerTolerance: 120, // Bigger = slower pointer
 };
 
-const body = document.body;
+const { body } = document;
 const controllerOptions = { enableGestures: true };
 const leapConfig = Reveal.getConfig()['reveal-leap-motion'];
 const pointer = document.createElement('div');
@@ -43,7 +41,7 @@ pointer.style.backgroundColor = config.pointerColor;
 pointer.style.opacity = config.pointerOpacity;
 pointer.style.position = 'absolute';
 pointer.style.visibility = 'hidden';
-pointer.style.zIndex = 50;
+pointer.style.zIndex = '50';
 
 body.appendChild(pointer);
 
@@ -67,9 +65,8 @@ Leap.loop(controllerOptions, (frame) => {
   // Check if the index finger is pointing
   // Check that the middle finger is not pointing to help clean up gestures
   if (frame.fingers.length > 0 && frame.fingers[1].extended && !frame.fingers[2].extended) {
-    const offsetHeight = body.offsetHeight;
-    const offsetWidth = body.offsetWidth;
-    const tipPosition = frame.fingers[1].tipPosition;
+    const { offsetHeight, offsetWidth } = body;
+    const { tipPosition } = frame.fingers[1];
 
     updatePointer(tipPosition[2]);
 
@@ -81,30 +78,34 @@ Leap.loop(controllerOptions, (frame) => {
       }
 
       const left = computeCenteredPosition(
-                    tipPosition[0],
-                    enteredPosition[0],
-                    offsetWidth,
-                    config.pointerTolerance);
+        tipPosition[0],
+        enteredPosition[0],
+        offsetWidth,
+        config.pointerTolerance,
+      );
 
       const top = computeCenteredPosition(
-                    tipPosition[1],
-                    enteredPosition[1],
-                    offsetHeight,
-                    config.pointerTolerance,
-                    true);
+        tipPosition[1],
+        enteredPosition[1],
+        offsetHeight,
+        config.pointerTolerance,
+        true,
+      );
 
       pointer.style.left = `${left}px`;
       pointer.style.top = `${top}px`;
     } else {
       const left = computeLeftPosition(
-                    tipPosition[0],
-                    offsetWidth,
-                    config.pointerTolerance);
+        tipPosition[0],
+        offsetWidth,
+        config.pointerTolerance,
+      );
 
       const top = computeTopPosition(
-                    tipPosition[1],
-                    offsetHeight,
-                    config.pointerTolerance);
+        tipPosition[1],
+        offsetHeight,
+        config.pointerTolerance,
+      );
 
       pointer.style.left = `${left}px`;
       pointer.style.top = `${top}px`;

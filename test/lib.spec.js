@@ -8,7 +8,7 @@ import {
 
 const chai = require('chai');
 
-const expect = chai.expect;
+const { expect } = chai;
 
 describe('#computeCenteredPosition', () => {
   describe('when inverse is false', () => {

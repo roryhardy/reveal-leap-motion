@@ -1,11 +1,7 @@
-const path = require('path');
 const version = JSON.stringify(require('./package.json').version);
-
-// Don't require webpack to be a dependency
-// eslint-disable-next-line import/no-extraneous-dependencies
 const webpack = require('webpack');
 
-const header = `
+const banner = `
   reveal-leap-motion v${version}
   https://github.com/gneatgeek/reveal-leap-motion
 
@@ -16,25 +12,22 @@ const header = `
 
 module.exports = {
   entry: {
-    'reveal-leap-motion': path.join(__dirname, 'src', 'reveal-leap-motion'),
+    'reveal-leap-motion': './src/reveal-leap-motion',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.(js)$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
+        test: /\.js$/,
       },
     ],
   },
-  plugins: [
-    new webpack.BannerPlugin(header),
-  ],
   output: {
     filename: '[name].min.js',
-    path: path.join(__dirname),
+    path: __dirname,
   },
-  resolve: {
-    extensions: ['', '.js'],
-  },
+  plugins: [
+    new webpack.BannerPlugin(banner),
+  ],
 };
