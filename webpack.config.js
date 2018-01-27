@@ -12,7 +12,7 @@ const banner = `
 
 module.exports = {
   entry: {
-    'reveal-leap-motion': './src/reveal-leap-motion',
+    'reveal-leap-motion': './src',
   },
   module: {
     rules: [
