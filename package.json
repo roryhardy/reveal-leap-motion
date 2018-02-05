@@ -41,6 +41,6 @@
     "build": "webpack -p",
     "lint-js": "eslint .",
     "test": "npm run lint-js && npm run test-js",
-    "test-js": "NODE_ENV=testing mocha --require babel-core/register --reporter nyan"
+    "test-js": "NODE_ENV=testing mocha --require babel-core/register"
   }
 }
