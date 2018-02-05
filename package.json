@@ -10,18 +10,21 @@
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.18.0",
     "banner-webpack-plugin": "^0.2.3",
     "chai": "^4.1.2",
-    "eslint": "^4.16.0",
+    "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.2.0",
     "mocha": "^5.0.0",
+    "mocha-jsdom": "^1.1.0",
+    "sinon": "^4.2.2",
     "webpack": "^3.10.0"
   },
   "dependencies": {
     "leapjs": "^0.6.4",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.5"
   },
   "homepage": "https://github.com/gneatgeek/reveal-leap-motion#readme",
   "keywords": [
@@ -39,6 +42,6 @@
     "build": "webpack -p",
     "lint-js": "eslint .",
     "test": "npm run lint-js && npm run test-js",
-    "test-js": "NODE_ENV=testing mocha --require babel-core/register"
+    "test-js": "NODE_ENV=testing mocha --require babel-core/register --reporter nyan"
   }
 }
