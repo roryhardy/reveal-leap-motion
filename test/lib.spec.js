@@ -6,7 +6,7 @@ import {
   computeTopPosition,
 } from '../src/lib';
 
-// eslint-disable no-unused-expressions
+/* eslint-disable no-unused-expressions */
 
 describe('#computeCenteredPosition', () => {
   context('when inverse is false', () => {
