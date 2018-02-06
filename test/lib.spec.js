@@ -6,10 +6,11 @@ import {
   computeTopPosition,
 } from '../src/lib';
 
+// eslint-disable no-unused-expressions
+
 describe('#computeCenteredPosition', () => {
   context('when inverse is false', () => {
     it('returns NaN with all 0 input', () => {
-      // eslint-disable-next-line no-unused-expressions
       expect(computeCenteredPosition(0, 0, 0, 0)).to.be.NaN;
     });
 
@@ -28,7 +29,6 @@ describe('#computeCenteredPosition', () => {
 
   context('when inverse is true', () => {
     it('returns NaN with all 0 input', () => {
-      // eslint-disable-next-line no-unused-expressions
       expect(computeCenteredPosition(0, 0, 0, 0, true)).to.be.NaN;
     });
 
@@ -41,7 +41,6 @@ describe('#computeCenteredPosition', () => {
 
 describe('#computeLeftPosition', () => {
   it('returns NaN with all 0 input', () => {
-    // eslint-disable-next-line no-unused-expressions
     expect(computeLeftPosition(0, 0, 0)).to.be.NaN;
   });
 
@@ -60,7 +59,6 @@ describe('#computeLeftPosition', () => {
 
 describe('#computeTopPosition', () => {
   it('returns NaN with all 0 input', () => {
-    // eslint-disable-next-line no-unused-expressions
     expect(computeTopPosition(0, 0, 0)).to.be.NaN;
   });
 
