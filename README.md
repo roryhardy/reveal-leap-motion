@@ -9,7 +9,6 @@ __Featured in:__
 - [Put an End to Boring Presentations with Reveal.js][3]
 
 ## Getting Started
-### npm
 1. Download and install the package in the presentation project: `npm i -S reveal-leap-motion`
 1. Add the plugin to the dependencies in the presentation, as below:
 
@@ -19,20 +18,6 @@ Reveal.initialize({
     dependencies: [
         // ...
         { src: 'node_modules/reveal-leap-motion/reveal-leap-motion.min.js', async: true }
-    ]
-});
-```
-
-### Manual
-1. Add the [reveal-leap-motion.min.js](https://github.com/gneatgeek/reveal-leap-motion/blob/master/reveal-leap-motion.min.js) file to the slideshow project's plugin directory.
-1. Add the plugin to the dependencies in the presentation, as below:
-
-```js
-Reveal.initialize({
-    // ...
-    dependencies: [
-        // ...
-        { src: 'plugin/reveal-leap-motion/reveal-leap-motion.min.js', async: true }
     ]
 });
 ```
@@ -78,7 +63,16 @@ Navigate through the slides by swiping up, down, left, or right. See the [config
 
 Swiping upwards with two hands will toggle the overview mode. A second swipe will exit the overview.
 
+## Misc
+
+reveal-leap-js includes [LeapJS][4], developed by [Leap Motion][1] for your
+convenience. It is licensed under Apache 2.0 and the license can be obtained
+[here][5].
+
+
 
 [1]: https://www.leapmotion.com/
 [2]: http://lab.hakim.se/reveal-js/#/
 [3]: http://blog.leapmotion.com/featured-platform-put-end-boring-presentations-reveal-js/
+[4]: https://github.com/leapmotion/leapjs
+[5]: https://github.com/leapmotion/leapjs/blob/master/LICENSE
