@@ -66,8 +66,8 @@ Swiping upwards with two hands will toggle the overview mode. A second swipe wil
 ## Misc
 
 reveal-leap-js includes [LeapJS][4], developed by [Leap Motion][1] for your
-convenience. It is licensed under Apache 2.0 and the license can be obtained
-[here][5].
+convenience. LeapJS is licensed under the Apache 2.0 license which can be
+obtained [here][5].
 
 ## Contributing
 
