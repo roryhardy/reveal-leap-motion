@@ -69,6 +69,10 @@ reveal-leap-js includes [LeapJS][4], developed by [Leap Motion][1] for your
 convenience. It is licensed under Apache 2.0 and the license can be obtained
 [here][5].
 
+## Contributing
+
+Contributions are encouraged and welcome! To get started, please see the
+[contribution guide](CONTRIBUTING.md).
 
 
 [1]: https://www.leapmotion.com/

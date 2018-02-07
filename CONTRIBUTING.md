@@ -1,6 +1,8 @@
 # Contributing
 
-Help make this project better by contributing. All contributions are welcome and appreciated! To get started, log an issue to the [issue tracker][1] or submit a pull request.
+Help make this project better by contributing. All contributions are welcome
+and appreciated! To get started, log an issue to the [issue tracker][1] or
+submit a pull request.
 
 Please review the below guidelines to ensure a smooth process.
 
@@ -24,6 +26,7 @@ Please review the below guidelines to ensure a smooth process.
 - Commit locally and push to your fork until you are ready to submit your contribution.
 - Make sure to add tests and verify all the tests are passing when issuing your pull request.
 - Open a [pull request][4].
+
 
 [1]: https://github.com/gneatgeek/reveal-leap-motion/issues
 [2]: http://gun.io/blog/how-to-github-fork-branch-and-pull-request
