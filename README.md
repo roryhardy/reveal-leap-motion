@@ -63,7 +63,7 @@ Navigate through the slides by swiping up, down, left, or right. See the [config
 
 Swiping upwards with two hands will toggle the overview mode. A second swipe will exit the overview.
 
-## Misc
+## Callouts
 
 reveal-leap-js includes [LeapJS][4], developed by [Leap Motion][1] for your
 convenience. LeapJS is licensed under the Apache 2.0 license which can be

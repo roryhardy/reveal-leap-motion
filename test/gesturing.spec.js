@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
-import gesturing from '../src/gesturing';
 import config from '../src/config';
+import gesturing from '../src/gesturing';
 
 /* eslint-disable no-unused-expressions, func-names, prefer-arrow-callback */
 
@@ -44,7 +44,7 @@ function swapSwipeDirection() {
   });
 }
 
-describe('gesturing', function () {
+describe('#gesturing', function () {
   beforeEach(function () {
     this.frame = {
       fingers: [
@@ -60,6 +60,33 @@ describe('gesturing', function () {
       ],
       hands: [{}],
     };
+  });
+
+  context('when there are no gestures', function () {
+    beforeEach(function () {
+      this.down = sinon.stub(Reveal, 'down');
+      this.left = sinon.stub(Reveal, 'left');
+      this.right = sinon.stub(Reveal, 'right');
+      this.toggle = sinon.stub(Reveal, 'toggleOverview');
+      this.up = sinon.stub(Reveal, 'up');
+    });
+
+    afterEach(function () {
+      Reveal.down.restore();
+      Reveal.left.restore();
+      Reveal.right.restore();
+      Reveal.toggleOverview.restore();
+      Reveal.up.restore();
+    });
+
+    it('does nothing', function () {
+      this.frame.gestures = [];
+      gesturing(this.frame);
+
+      noGestures.call(this);
+
+      expect(this.toggle.notCalled).to.be.true;
+    });
   });
 
   describe('one handed gestures', function () {

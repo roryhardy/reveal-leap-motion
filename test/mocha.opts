@@ -1,0 +1,2 @@
+--require mocha_setup.js
+--require babel-core/register
