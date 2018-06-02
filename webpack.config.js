@@ -1,3 +1,4 @@
+const leapjsVersion = JSON.stringify(require('./node_modules/leapjs/package.json').version);
 const version = JSON.stringify(require('./package.json').version);
 const webpack = require('webpack');
 
@@ -11,18 +12,19 @@ const banner = `
 
   ===================================================================
 
-  LeapJS v0.6.4
+  LeapJS v${leapjsVersion}
   http://github.com/leapmotion/leapjs/
 
   Copyright 2013 LeapMotion, Inc. and other contributors
   Released under the Apache-2.0 license
-  http://github.com/leapmotion/leapjs/blob/master/LICENSE.txt  
+  http://github.com/leapmotion/leapjs/blob/master/LICENSE.txt
 `.trim().replace(/^ +|"/gm, '');
 
 module.exports = {
   entry: {
     'reveal-leap-motion': './src',
   },
+  mode: 'production',
   module: {
     rules: [
       {
